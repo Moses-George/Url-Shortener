@@ -1,0 +1,63 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+hr {
+    background-color: hsl(300, 3%, 8%);
+}
+
+.menu {
+    position: fixed;
+    top: 15vh;
+    z-index: 100;
+    background-color: hsl(257, 27%, 26%);
+    border-radius: 7px;
+    padding: 1rem 2rem;
+    width: 21rem;
+    animation: slide-down 300ms ease-out forwards;
+}
+
+.menu-links, .btn {
+    display: grid;
+    justify-items: center;
+    row-gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn button {
+    padding: 1rem 0;
+    width: 100%;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn button:nth-child(1) {
+    background-color: transparent;
+    padding: 0;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

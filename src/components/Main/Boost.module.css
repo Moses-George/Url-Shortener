@@ -1,0 +1,29 @@
+.boost {
+    background-image: url("../../Assests/images/bg-boost-desktop.svg");
+    background-color: hsl(257, 27%, 26%);
+    padding: 2rem;
+    background-position: center;
+    text-align: center;
+    width: 100%;
+}
+
+.boost h1 {
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.boost button {
+    padding: .9rem 3rem;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+    .boost {
+        background-image: url("../../Assests/images/bg-boost-mobile.svg");
+    }
+    .boost h1 {
+        font-size: 1.5rem;
+    }
+}

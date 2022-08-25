@@ -1,0 +1,84 @@
+.inputArea {
+    background-image: url("../../Assests/images/bg-shorten-desktop.svg");
+    background-color: hsl(257, 27%, 26%);
+    background-size: cover;
+    background-position: center;
+    justify-self: center;
+    padding: 2rem 2rem 1rem 2rem;
+    border-radius: 10px;
+    width: 84%;
+    animation: input 2s forwards;
+}
+
+.form {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: .5rem;
+}
+
+.form input {
+    width: 50rem;
+    padding: .4rem;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 7px;
+}
+
+.form button {
+    padding: .8rem 3rem;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+.inputArea i {
+    color: red;
+}
+
+.invalid input {
+    border: 2px solid red;
+}
+
+.invalid input::placeholder {
+    color: red;
+}
+
+@keyframes input {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    25%{opacity: .3;}
+
+    50% {opacity: .6;}
+
+    75% {opacity: .8;}
+
+    100% {
+        transform: translateY(-3rem);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .inputArea {
+        background-image: url("../../Assests/images/bg-shorten-mobile.svg");
+        padding: 1rem;
+        width: 90%;
+    }
+    .form {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .form input {
+        width: 90%;
+        padding: .7rem;
+        align-self: center;
+    }
+    .form button {
+        width: 90%;
+        align-self: center;
+    }
+}

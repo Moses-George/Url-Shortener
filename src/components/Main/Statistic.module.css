@@ -1,0 +1,37 @@
+.statistic {
+    padding: 1rem;
+    background-color: #fff;
+    width: 22rem;
+    height: 14rem;
+    border-radius: 5px;
+    animation: wave 1.5s forwards;
+}
+
+.statistic img {
+    background-color: hsl(255, 11%, 22%);
+    border-radius: 50%;
+    padding: .7rem;
+    margin-top: -5rem;
+}
+
+.statistic h3 {
+    color:  hsl(255, 11%, 22%);
+}
+
+.statistic p {
+    line-height: 1.5;
+    color: hsl(257, 7%, 63%);
+}
+
+@media screen and (max-width: 500px) {
+    .statistic {
+        text-align: center;
+        width: 19rem;
+    }
+    .statistic h3 {
+        margin: 0;
+    }
+    .statistic img {
+        margin-top: -2.5rem;
+    }
+}

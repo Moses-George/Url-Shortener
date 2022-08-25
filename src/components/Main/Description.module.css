@@ -1,0 +1,32 @@
+.summary {
+    padding: 4rem 0 0rem 0;
+    text-align: center;
+    height: 25rem;
+    width: 27rem;
+}
+
+.summary p {
+    line-height: 1.5;
+    max-width: 25rem;
+    color: hsl(257, 7%, 63%);
+}
+
+.summary h1 {
+    color: hsl(255, 11%, 22%);
+    margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .summary {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        padding-top: 2rem;
+        align-items: center;
+        width: 100%;
+    }
+    .summary p {
+        max-width: 18rem;
+        margin: 0;
+    }
+}

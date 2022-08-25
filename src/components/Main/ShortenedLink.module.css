@@ -1,0 +1,92 @@
+hr {
+    display: none;
+}
+
+.shortenedLink {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    padding: 0 2rem;
+    border-radius: 8px;
+    font-size: 18px;
+    animation: add 500ms forwards;
+}
+
+.copyLink {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.copyLink button {
+    align-self: center;
+    padding: .7rem 2rem;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.copyLink > a {
+    text-decoration: none;
+    color: hsl(180, 66%, 49%);
+}
+
+.copied {
+    background-color: hsl(260, 8%, 14%);
+    animation: bump 10ms ease-in-out;
+}
+
+.copied:hover {
+    background-color: hsl(260, 8%, 14%);
+}
+
+@keyframes add {
+    0% {
+        transform: translateY(1rem);
+        opacity: .7;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bump {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .shortenedLink {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+    .shortenedLink > p{
+        margin: 0;
+        padding: 1rem;
+    }
+    .copyLink {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        column-gap: 0;
+    }
+    .copyLink a {
+        padding-bottom: .6rem;
+    }
+    .copyLink button {
+        width: 100%;
+    }
+    hr {
+        display: block;
+        margin: 0;
+    }
+}
