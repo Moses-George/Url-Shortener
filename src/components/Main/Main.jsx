@@ -36,15 +36,20 @@ const StatisticsData = [
 
 const Main = () => {
 
-    const [links, setLinks] = useState([
-        // { id: 1, reLink: "https://pages.github.com/", shortenedLink: "http://reLinkK4lKy" }
-    ]);
+    const [links, setLinks] = useState([]);
     const [isloading, setIsLoading] = useState(false);
     const [error, setError] = useState("");
 
     const addNewLink = (newLink) => {
         setLinks(prev => [...prev, newLink]);
     }
+
+    const generatedLink = links.map(link =>
+        <ShortenedLink
+            key={link.id}
+            reUrl={link.reLink}
+            shortenedUrl={link.shortenedLink}
+        />)
 
     return (
         <main className={classes.main}>
@@ -54,12 +59,7 @@ const Main = () => {
                 error={error}
                 setError={setError} />
             <div className={classes.shortenedLinks}>
-                {isloading ? <Spinner /> : error ? null : links.length !== 0 && links.map(link =>
-                    <ShortenedLink
-                        key={link.id}
-                        reUrl={link.reLink}
-                        shortenedUrl={link.shortenedLink}
-                    />)}
+                {isloading ? <Spinner /> : error ? null : links.length !== 0 && generatedLink}
                 {error && <div className={classes.error}><span>Error</span>: {error}</div>}
             </div>
             <Description />

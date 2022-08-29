@@ -4,12 +4,12 @@ import { CopyTextToClipboard } from "../UI/Clipboard";
 import Button from "../UI/Button";
 import classes from '../Main/ShortenedLink.module.css';
 
-const ShortenedLink = (props) => {
+const ShortenedLink = ({reUrl, shortenedUrl}) => {
 
     const [isCopied, setIsCopied] = useState(false);
 
     const handleCopyLink = () => {
-        CopyTextToClipboard(props.shortenedUrl)
+        CopyTextToClipboard(shortenedUrl)
             .then(() => {
                 setIsCopied(true);
                 setTimeout(() => {
@@ -23,10 +23,10 @@ const ShortenedLink = (props) => {
 
     return (
         <div className={classes.shortenedLink}>
-            <p>{props.reUrl}</p>
+            <p>{reUrl}</p>
             <hr />
             <div className={classes.copyLink}>
-                <a href={props.shortenedUrl}>{props.shortenedUrl}</a>
+                <a href={shortenedUrl}>{shortenedUrl}</a>
                 <Button
                     className={`${classes.copy} ${isCopied && classes.copied}`}
                     onClick={handleCopyLink} >{isCopied ? "Copied!" : "Copy"}</Button>

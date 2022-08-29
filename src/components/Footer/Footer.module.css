@@ -36,10 +36,6 @@ footer {
     fill: hsl(180, 66%, 49%);
 }
 
-/* .attribution a {
-    color: hsl(228, 45%, 44%);
-} */
-
 @media screen and (max-width: 500px) {
     footer {
         flex-direction: column;

@@ -46,8 +46,8 @@ nav {
 @media screen and (max-width: 500px) {
     nav {
         display: grid;
-        grid-template-columns: 9fr 1fr;
-        padding: 2rem 1rem;
+        grid-template-columns: 10fr 0fr;
+        padding: 2rem 1.5rem;
     }
     .navlinks ul {
         display: none;
@@ -59,6 +59,8 @@ nav {
 
     .navbar-btn img {
         display: block;
+        justify-self: start;
+        /* padding: 0; */
         z-index: 100;
     }
 
