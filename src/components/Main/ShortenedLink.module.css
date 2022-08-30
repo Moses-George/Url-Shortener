@@ -10,6 +10,8 @@ hr {
     padding: 0 2rem;
     border-radius: 8px;
     font-size: 18px;
+    word-wrap: break-word;
+    word-break: break-all;
     animation: add 500ms forwards;
 }
 
